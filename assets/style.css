@@ -1,0 +1,100 @@
+/* style.css - sizning asl stillaringiz + ozgina qo'shimchalar */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f4f4f9;
+}
+
+.welcome-container {
+  text-align: center;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.form-group {
+  margin: 20px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 14px 32px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#submitBtn, .booster-btn {
+  background: #087f3a;
+  color: white;
+  margin-top: 30px;
+  width: 100%;
+}
+
+button:disabled {
+  background: #ce0818;
+  cursor: not-allowed;
+}
+
+#startBtn {
+  background: #27ae60;
+  color: white;
+  margin-top: 30px;
+}
+
+#startBtn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+#finishBtn{
+  background: #27ae60;
+  color: white;
+  margin-top: 30px;
+}
+
+
+
+
+.booster-btn {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 18px auto;
+  padding: 16px;
+  font-size: 1.3em;
+  background: #3498db;
+}
+
+.booster-btn:hover {
+  background: #2980b9;
+}
+
+/* quiz sahifasi uchun eski stillaringiz shu yerga qoladi */
+.timer { font-size: 1.4em; margin: 12px 0; font-weight: bold; color: #e74c3c; }
+.question-card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-left: 5px solid #3498db; }
+/* ... qolgan stillar ... */

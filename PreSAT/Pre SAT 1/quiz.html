@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booster Mock 1: SAT Math Quiz</title>
+  
+  <!-- Favicon qo'shildi -->
+  <link rel="icon" href="../../favicon.jpg" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Booster Mock 1: Interactive SAT Math Quiz</h2>
+    <div class="timer">Remaining time: <span id="time">60:00</span></div>
+    <div id="student-info"></div>
+  </div>
+
+  <div id="quiz-container">
+
+    <!-- Question 1 -->
+    <div class="question-card" data-qnum="1" data-answer="?" data-type="text">
+      <span class="question-num">Question 1</span>
+      <p>\(\sqrt[4]{x^3} \cdot \sqrt[12]{x^5}\)</p>
+      <p>The given expression is equivalent to \(\sqrt[m]{x^n}\), where \(m\) and \(n\) are positive constants each less than 10 and \(x > 1\). What is the value of \(\frac{m}{n}\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card" data-qnum="2" data-answer="?" data-type="text">
+      <span class="question-num">Question 2</span>
+      <p>\(\sqrt[4]{x^3} \cdot \sqrt[12]{x^5}\)</p>
+      <p>The given expression is equivalent to \(\sqrt{x^m}\), where \(m\) and \(n\) are positive constants each less than 10 and \(x > 1\). What is the value of \(\frac{m}{n}\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card" data-qnum="3" data-answer="?" data-type="text">
+      <span class="question-num">Question 3</span>
+      <p>Two numbers, \(p\) and \(q\), are each greater than zero, and the square of \(p\) is equal to the cube root of \(q\). For what value of \(x\) is \(p^{1-x}\) equal to the square root of \(q\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-card" data-qnum="4" data-answer="?" data-type="text">
+      <span class="question-num">Question 4</span>
+      <p>\[\frac{10 \sqrt[6]{9x^{48}}}{\sqrt[4]{6^4 x}}\]</p>
+      <p>The given expression is equivalent to \(a x^b\), where \(a > 0\), \(b > 0\), and \(x > 1\). What is the value of \(ab\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-card" data-qnum="5" data-answer="C" data-type="radio">
+      <span class="question-num">Question 5</span>
+      <p>\(V = P(1 - r)^t\)</p>
+      <p>The value \(V\) of a car depreciates over \(t\) years according to the given equation, where \(P\) is the original price and \(r\) is the annual rate of depreciation. Which of the following correctly expresses \(r\) in terms of \(V\), \(P\), and \(t\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q5" value="A"> A) \(r = 1 - \sqrt{\frac{V}{P}}\)</li>
+        <li><input type="radio" name="q5" value="B"> B) \(r = 1 + \sqrt{\frac{V}{P}}\)</li>
+        <li><input type="radio" name="q5" value="C"> C) \(r = \sqrt{\frac{V}{P}} - 1\)</li>
+        <li><input type="radio" name="q5" value="D"> D) \(r = 1 - \frac{\sqrt{V}}{P}\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question-card" data-qnum="6" data-answer="?" data-type="text">
+      <span class="question-num">Question 6</span>
+      <p>\(B + 8A = 5(4C + B)\)</p>
+      <p>The given equation can be rewritten as \(B = mA - nC\), where \(m\) and \(n\) are constants. What is the value of \(m + n\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question-card" data-qnum="7" data-answer="?" data-type="text">
+      <span class="question-num">Question 7</span>
+      <p>\(\sqrt{x + 9} = \frac{x}{2} - 3\)</p>
+      <p>What is the solution to the given equation?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question-card" data-qnum="8" data-answer="B" data-type="radio">
+      <span class="question-num">Question 8</span>
+      <p>\(3x + a(3 - 2x) = 12 - 7x\)</p>
+      <p>In the given equation, \(a\) is a constant. The equation has no solution. What is the value of \(a\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q8" value="A"> A) -2</li>
+        <li><input type="radio" name="q8" value="B"> B) 2</li>
+        <li><input type="radio" name="q8" value="C"> C) 4</li>
+        <li><input type="radio" name="q8" value="D"> D) 5</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question-card" data-qnum="9" data-answer="C" data-type="radio">
+      <span class="question-num">Question 9</span>
+      <p>\(g(x) = \left| \frac{7}{9} x - 40 \right|\)</p>
+      <p>The function \(g\) is defined by the given equation. For which of the following values of \(a\) does \(g(a) = a\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q9" value="A"> A) -180</li>
+        <li><input type="radio" name="q9" value="B"> B) \(\frac{27}{2}\)</li>
+        <li><input type="radio" name="q9" value="C"> C) \(\frac{45}{2}\)</li>
+        <li><input type="radio" name="q9" value="D"> D) \(\frac{360}{7}\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question-card" data-qnum="10" data-answer="B" data-type="radio">
+      <span class="question-num">Question 10</span>
+      <p>\(4x^2 + mx + 9 = (2x + n)^2\)</p>
+      <p>In the given equation, \(m\) and \(n\) are constants and \(n < 0\). If the equation is true for all values of \(x\), what is the value of \(m + n\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q10" value="A"> A) -15</li>
+        <li><input type="radio" name="q10" value="B"> B) -9</li>
+        <li><input type="radio" name="q10" value="C"> C) -3</li>
+        <li><input type="radio" name="q10" value="D"> D) 12</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question-card" data-qnum="11" data-answer="B" data-type="radio">
+      <span class="question-num">Question 11</span>
+      <p>[Graph shown: quartic curve touching the x-axis at approximately x = -3, -2, 2, 3]</p>
+      <p>Which of the following could be the equation of the graph shown?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q11" value="A"> A) \(y = (x + 2)^2(x - 3)^2\)</li>
+        <li><input type="radio" name="q11" value="B"> B) \(y = (x - 2)^2(x + 3)^2\)</li>
+        <li><input type="radio" name="q11" value="C"> C) \(y = 2(x + 2)^2(x - 3)^2\)</li>
+        <li><input type="radio" name="q11" value="D"> D) \(y = 2(x - 2)^2(x + 3)^2\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question-card" data-qnum="12" data-answer="?" data-type="text">
+      <span class="question-num">Question 12</span>
+      <p>The function \(f\) is defined by \(f(x) = b \cdot a^x\), where \(a\) and \(b\) are positive constants, and \(g(x) = f(x + 2)\). The graph of \(y = f(x)\) in the \(xy\)-plane passes through the points \((0, 36)\) and \((-3, \frac{9}{16})\). Which equation defines the function \(g\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q12" value="A"> A) \(g(x) = 216 \cdot 3^x\)</li>
+        <li><input type="radio" name="q12" value="B"> B) \(g(x) = 324 \cdot 3^x\)</li>
+        <li><input type="radio" name="q12" value="C"> C) \(g(x) = 288 \cdot 4^x\)</li>
+        <li><input type="radio" name="q12" value="D"> D) \(g(x) = 576 \cdot 4^x\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question-card" data-qnum="13" data-answer="?" data-type="text">
+      <span class="question-num">Question 13</span>
+      <p>\(f(x) = b\sqrt{a - x} + 7\sqrt{a - x}\)</p>
+      <p>For the function \(f\), \(a\) and \(b\) are constants and \(f(16) = 0\). If \(f(9) > 0\), which of the following could be the value of \(a + b\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q13" value="A"> A) -3</li>
+        <li><input type="radio" name="q13" value="B"> B) 7</li>
+        <li><input type="radio" name="q13" value="C"> C) 9</li>
+        <li><input type="radio" name="q13" value="D"> D) 15</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question-card" data-qnum="14" data-answer="?" data-type="text">
+      <span class="question-num">Question 14</span>
+      <p>[Table shown: three pairs of (x, y) values with constant p, linear relationship]</p>
+      <p>What is the slope of the line that represents this relationship in the x-y-plane?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q14" value="A"> A) \(-\frac{57}{4}\)</li>
+        <li><input type="radio" name="q14" value="B"> B) \(\frac{57}{4}\)</li>
+        <li><input type="radio" name="q14" value="C"> C) \(\frac{p-57}{-4}\)</li>
+        <li><input type="radio" name="q14" value="D"> D) \(\frac{2p+57}{4}\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question-card" data-qnum="15" data-answer="D" data-type="radio">
+      <span class="question-num">Question 15</span>
+      <p>The graph of the equation \(5x - 8y = k\), where \(k\) is a constant, is a line in the \(xy\)-plane. The line has an \(x\)-intercept at \((m, 0)\) and a \(y\)-intercept at \((0, n)\), where \(m\) and \(n\) are constants. What is the value of \(\frac{m}{n}\)?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q15" value="A"> A) \(-\frac{8}{5}\)</li>
+        <li><input type="radio" name="q15" value="B"> B) \(-\frac{5}{8}\)</li>
+        <li><input type="radio" name="q15" value="C"> C) \(\frac{5}{8}\)</li>
+        <li><input type="radio" name="q15" value="D"> D) \(\frac{8}{5}\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question-card" data-qnum="16" data-answer="B" data-type="radio">
+      <span class="question-num">Question 16</span>
+      <p>A recipe suggests sweetening honey tea with sugar according to the equation \(s = 10 - 2h\), where \(s\) is the amount of sugar, in teaspoons, that should be added to a tea beverage containing \(h\) teaspoons of honey. What is the best interpretation of 2 in this context?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q16" value="A"> A) For every teaspoon of honey in the beverage, two more teaspoons of sugar should be added.</li>
+        <li><input type="radio" name="q16" value="B"> B) For every teaspoon of honey in the beverage, two fewer teaspoons of sugar should be added.</li>
+        <li><input type="radio" name="q16" value="C"> C) For every two teaspoons of honey in the beverage, one more teaspoon of sugar should be added.</li>
+        <li><input type="radio" name="q16" value="D"> D) For every two teaspoons of honey in the beverage, one fewer teaspoon of sugar should be added.</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question-card" data-qnum="17" data-answer="?" data-type="text">
+      <span class="question-num">Question 17</span>
+      <p>A teacher printed sticker sheets with 7 stickers on each sheet. At a school party, she gave out 2 stickers to each student who attended. The relationship between the number of students who attended the party, x, and the number of sticker sheets that the teacher printed, y, is represented by the equation \(7y - 32 = 2x\). What is the best interpretation of 32 in this context?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q17" value="A"> A) The teacher gave out a total of 32 stickers at the party.</li>
+        <li><input type="radio" name="q17" value="B"> B) The teacher had 32 sticker sheets remaining after the party.</li>
+        <li><input type="radio" name="q17" value="C"> C) The teacher printed 32 more stickers than she gave out at the party.</li>
+        <li><input type="radio" name="q17" value="D"> D) The teacher printed a total of 32 sticker sheets.</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question-card" data-qnum="18" data-answer="?" data-type="text">
+      <span class="question-num">Question 18</span>
+      <p>In 2016, County A and County B collected the same amount of taxes. In 2017, the amount of taxes collected by County A decreased by 25% and the amount of taxes collected by County B increased by 20%. If County A collected 60 million dollars of taxes in 2017, what was the amount of taxes, in millions of dollars, County B collected in 2017?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q18" value="A"> A) 54</li>
+        <li><input type="radio" name="q18" value="B"> B) 78</li>
+        <li><input type="radio" name="q18" value="C"> C) 90</li>
+        <li><input type="radio" name="q18" value="D"> D) 96</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question-card" data-qnum="19" data-answer="?" data-type="text">
+      <span class="question-num">Question 19</span>
+      <p>The number \(r\) is 70% less than the number \(s\). The number \(r\) is 60% greater than the number \(t\). If \(s = 180\), what is the value of \(t\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question-card" data-qnum="20" data-answer="C" data-type="radio">
+      <span class="question-num">Question 20</span>
+      <p>The amount of data, in gigabytes, stored in a database increases by 2% every 15 hours. If 16 gigabytes worth of data are currently stored in the database, which of the following functions \(g\) gives the amount of data, in gigabytes, that will be stored in the database \(t\) days from now?</p>
+      <ul class="options-list">
+        <li><input type="radio" name="q20" value="A"> A) \(g(t) = 16(2)^{15t}\)</li>
+        <li><input type="radio" name="q20" value="B"> B) \(g(t) = 16(1.02)^{\frac{1}{15}t}\)</li>
+        <li><input type="radio" name="q20" value="C"> C) \(g(t) = 16(1.02)^{\frac{5t}{3}}\)</li>
+        <li><input type="radio" name="q20" value="D"> D) \(g(t) = 16(1.02)^{\frac{8t}{5}}\)</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="question-card" data-qnum="21" data-answer="?" data-type="text">
+      <span class="question-num">Question 21</span>
+      <p>The function \(f\) is defined by:</p>
+      <p>\[f(x) = \frac{x^2 + ax + b}{2x + c}\]</p>
+      <p>where \(a\), \(b\), and \(c\) are constants. The graph of the function \(f\) in the \(xy\)-plane does not intersect the line \(x = 4\).</p>
+      <p>If \(f(6) = f(8) = 0\), what is the value of \(a + b + c\)?</p>
+      Your Answer: <input type="text" class="user-input">
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question-card" data-qnum="22" data-answer="?" data-type="text">
+      <span class="question-num">Question 22</span>
+      <p>[Graph shown: exponential function graph]</p>
+      <img src="./22.png" alt="" />
+      <ul class="options-list">
+        <li><input type="radio" name="q22" value="A"> A) 63</li>
+        <li><input type="radio" name="q22" value="B"> B) 85</li>
+        <li><input type="radio" name="q22" value="C"> C) 102</li>
+        <li><input type="radio" name="q22" value="D"> D) 480</li>
+      </ul>
+      <div class="correct-answer-display" style="display:none; margin-top:12px; padding:10px; border-radius:6px;">
+        <strong>Correct answer: </strong><span class="correct-answer-text"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="check-btn" id="finishBtn">Finish</button>
+  <div id="results" style="display:none; margin: 40px auto; max-width: 800px;"></div>
+
+  <script src="../../assets/script.js"></script>
+
+</body>
+
+</html>

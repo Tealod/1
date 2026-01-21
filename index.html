@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yokubjon Isaqjonov SAT Mathematics</title>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin: 20px 0 10px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      opacity: 0.9;
+      margin-bottom: 50px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 40px 30px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+
+    .card:hover {
+      transform: translateY(-16px) scale(1.03);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .card h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+
+    .booster-btn {
+      padding: 16px 48px;
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 600;
+      background: linear-gradient(90deg, #ff6b6b, #ffd166);
+      color: #0f2027;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(193, 5, 5, 0.5);
+      transition: all 0.35s ease;
+      animation: pulse 2.8s infinite;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      display: block;
+      gap: 24px;
+    }
+
+    .booster-btn:hover {
+      transform: translateY(-6px) scale(1.06);
+      box-shadow: 0 15px 40px rgba(255,107,107,0.7);
+      background: linear-gradient(90deg, #ffd166, #ff6b6b);
+    }
+    
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .container {
+        padding: 30px 15px;
+      }
+      .cards-wrapper {
+        gap: 30px;
+      }
+      .card {
+        padding: 35px 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .subtitle { font-size: 1.2rem; margin-bottom: 40px; }
+      .booster-btn { padding: 14px 32px; font-size: 1.1rem; }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div id="particles"></div>
+
+  <div class="container">
+    <h1>Yokubjon Isaqjonov SAT Mathematics</h1>
+    <p class="subtitle">Interactive Moodle Mock Questions – Boost Your Score!</p>
+
+    <div class="cards-wrapper">
+      <!-- Moodle 1 -->
+      <div class="card">
+        <h1>Moodle 1 Mock Questions</h1>
+        <h2>Yokubjon Isaqjonov</h2>
+        <div id="booster-list-1"></div>
+      </div>
+
+      <!-- Moodle 2 -->
+      <div class="card">
+        <h1>Moodle 2 Mock Questions</h1>
+        <h2>Yokubjon Isaqjonov</h2>
+        <div id="booster-list-2"></div>
+      </div>
+
+      <!-- Moodle 3 (agar kerak bo'lsa oching) -->
+      
+      <div class="card">
+        <h1>Pre SAT Questions</h1>
+        <h2>Yokubjon Isaqjonov</h2>
+        <div id="booster-list-3"></div>
+      </div>
+     
+    </div>
+  </div>
+
+  <script>
+    // Moodle 1 boosters
+    const moodle1 = [
+      { name: "Booster 1", startPage: "Moodle_1/booster1/booster1.html" },
+    //   { name: "Booster 2", startPage: "Moodlebooster2/booster2.html" },
+    //   { name: "Booster 3", startPage: "booster3/booster3.html" },
+    ];
+
+    // Moodle 2 boosters (siz xohlagancha o'zgartiring)
+    const moodle2 = [
+      { name: "Practice Set A", startPage: "moodle2/set-a.html" },
+      { name: "Practice Set B", startPage: "moodle2/set-b.html" },
+      { name: "Advanced Mode",  startPage: "moodle2/advanced.html" },
+    ];
+
+    const moodle3 = [
+      { name: "Pre SAT 1", startPage: "PreSAT/Pre SAT 1/start.html" }, 
+      // { name: "Practice Set A", startPage: "moodle2/set-a.html" },
+      // { name: "Practice Set B", startPage: "moodle2/set-b.html" },
+      // { name: "Advanced Mode",  startPage: "moodle2/advanced.html" },
+    ];
+
+
+    function createButtons(containerId, items) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      items.forEach(item => {
+        const btn = document.createElement("button");
+        btn.className = "booster-btn";
+        btn.textContent = `Start ${item.name}`;
+        btn.onclick = () => window.location.href = item.startPage;
+        container.appendChild(btn);
+      });
+    }
+
+    createButtons("booster-list-1", moodle1);
+    createButtons("booster-list-2", moodle2);
+    createButtons("booster-list-3", moodle3);
+  </script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 130, color: "#ffffff", opacity: 0.3, width: 1 },
+        move: { enable: true, speed: 1.5, direction: "none", random: true, straight: false, out_mode: "out" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 80, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+</body>
+<footer style="text-align:center; margin-top: 20px; font-size:14px; color:gray;">
+  © 2026 | Developed by Muhsinjon
+</footer>
+</html>
